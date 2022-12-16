@@ -1,0 +1,31 @@
+.header {
+    background-color: #2C5784;
+    height: 6em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.unList {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.linkNav {
+    text-decoration: none;
+    padding: 0em 1em;
+    color: #ffffff;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.div__logo {
+    width: 4em;
+    height: 4em;
+}
+
+.logoBeSelf {
+    width: 100%;
+}
