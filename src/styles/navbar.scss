@@ -1,9 +1,9 @@
 .header {
-    background-color: #2C5784;
+    background-color: #F4F4F9;
     height: 6em;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .unList {
@@ -16,16 +16,17 @@
 .linkNav {
     text-decoration: none;
     padding: 0em 1em;
-    color: #ffffff;
+    color: #2C5784;
     font-size: 1.2em;
     font-weight: bold;
 }
 
 .div__logo {
-    width: 4em;
-    height: 4em;
+    width: 5em;
+    height: 5em;
 }
 
 .logoBeSelf {
     width: 100%;
+    height: 100%;
 }
