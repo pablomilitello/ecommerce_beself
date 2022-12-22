@@ -1,4 +1,4 @@
-import CartWidget from "./CartWidget.js";
+import CartWidget from "../CartWidget/CartWidget.js";
 
 function NavBar() {
   return (

@@ -1,24 +1,19 @@
 import "./styles/App.scss";
-import "./styles/cartwidget.scss";
-import "./styles/navbar.scss";
-import "./styles/itemlistcontainer.scss";
-import "./styles/carrusel.scss";
-import "./styles/cardproducts.scss";
-import "./styles/itemcount.scss";
+import "../src/components/CartWidget/cartwidget.scss";
+import "../src/components/NavBar/navbar.scss";
+import "../src/components/ItemListContainer/itemlistcontainer.scss";
+import "../src/components/CardProducts/cardproducts.scss";
+import "../src/components/ItemCount/itemcount.scss";
 import "./styles/base/reset.scss";
 import "./styles/base/typography.scss";
-import "./components/NavBar.js";
-import "./components/ItemListContainer.js";
-import NavBar from "./components/NavBar.js";
-import ItemListContainer from "./components/ItemListContainer.js";
-import Carrusel from "./components/Carrusel.js";
+import NavBar from "../src/components/NavBar/NavBar.js";
+import ItemListContainer from "../src/components/ItemListContainer/ItemListContainer.js";
 
 function App() {
   return (
     <div className="App">
       <NavBar />
-      <ItemListContainer gretting="Bienvenido a BeSelf!!!" />
-      <Carrusel />
+      <ItemListContainer />
     </div>
   );
 }
