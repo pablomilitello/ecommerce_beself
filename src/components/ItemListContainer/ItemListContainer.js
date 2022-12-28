@@ -1,11 +1,21 @@
-import CardProducts from "../CardProducts/CardProducts.js";
+import { useState, useEffect } from "react";
+import GetProducts from "../../services/mockServices.js";
+import Item from "../Item/Item.js";
 
-function ItemListContainer(props) {
+function ItemListContainer() {
+  const [arrayProducts, setArrayProducts] = useState([]);
+
+  useEffect(() => {
+    GetProducts().then((response, reject) => {
+      setArrayProducts(response);
+    }, []);
+  });
+
   return (
     <div className="div__listContainer">
-      <CardProducts name="Tratamiento Facial" link="./images/imagen11.jpeg" price="1500" stock={5} />
-      <CardProducts name="Masajes faciales" link="./images/prueba3.jpg" price="1200" stock={10} />
-      <CardProducts name="Tratamiento acne" link="./images/prueba2.jpg" price="1700" stock={7} />
+      {arrayProducts.map((item) => (
+        <Item key={item.id} item={item} />
+      ))}
     </div>
   );
 }

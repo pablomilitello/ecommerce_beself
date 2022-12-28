@@ -1,9 +1,7 @@
-import { Children, useState } from "react";
-import "../ItemCount/ItemCount.js";
+import { useState } from "react";
 
 function ItemCount(props) {
   const [count, setCount] = useState(1);
-  console.log(Children.stock);
   function handleAdd() {
     setCount(count + 1);
   }

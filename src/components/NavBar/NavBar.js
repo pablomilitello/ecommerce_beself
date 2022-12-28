@@ -1,6 +1,14 @@
 import CartWidget from "../CartWidget/CartWidget.js";
 
 function NavBar() {
+  const linksNavBar = [
+    { title: "Inicio", url: "/Inicio" },
+    { title: "Nosotros", url: "/Nosotros" },
+    { title: "Tratamientos", url: "/Tratamientos" },
+    { title: "Productos", url: "/Productos" },
+    { title: "Contacto", url: "/Contacto" },
+  ];
+
   return (
     <header className="header">
       <div className="div__logo">
@@ -9,29 +17,11 @@ function NavBar() {
       <nav className="navBar">
         <ul className="unList">
           <li>
-            <a href="/" className="linkNav">
-              Inicio
-            </a>
-          </li>
-          <li>
-            <a href="/" className="linkNav">
-              Nosotros
-            </a>
-          </li>
-          <li>
-            <a href="/" className="linkNav">
-              Tratamientos
-            </a>
-          </li>
-          <li>
-            <a href="/" className="linkNav">
-              Productos
-            </a>
-          </li>
-          <li>
-            <a href="/" className="linkNav">
-              Contacto
-            </a>
+            {linksNavBar.map((element) => (
+              <a key={element.url} href={element.url} className="linkNav">
+                {element.title}
+              </a>
+            ))}
           </li>
         </ul>
       </nav>
