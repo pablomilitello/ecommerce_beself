@@ -3,10 +3,19 @@
     height: 19em;
     border-radius: 6px;
     background-color: #FFFFEE;
-    margin: 0px 20px;
+    margin: 20px 10px 10px 10px;
     box-shadow: 5px 5px 5px gray;
     overflow: hidden;
+    transition: all 0.25s;
+
+    &:hover {
+        transform: translate(-5px);
+    }
 }
+
+
+
+
 
 .imgItemContainer {
     width: 15em;

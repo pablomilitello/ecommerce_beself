@@ -1,6 +1,36 @@
 .footerConteiner {
-    background-color: #6494AA;
-    height: 2em;
+    background-color: #918868;
+    height: 8em;
     font-size: 1.5em;
     font-weight: bold;
+    font-size: 0.9rem;
+    color: #000000;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.footer__text {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+    color: #ffffff;
+}
+
+footer a {
+    color: #ffffff;
+}
+
+.footer-img-social_networks {
+    width: 2em;
+    height: 2em;
+
+    margin: 0rem 0.6rem;
+    -webkit-filter: invert(100%);
+    -moz-filter: invert(100%);
+    filter: invert(100%);
+
+    &:hover {
+        transform: scale(1.1);
+    }
 }

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import GetProducts from "../../services/mockServices.js";
-import Item from "../Item/Item.js";
+import GetProducts from "../../../services/mockServices.js";
+import Item from "../../Item/Item.js";
 
 function ItemList() {
   const [arrayProducts, setArrayProducts] = useState([]);

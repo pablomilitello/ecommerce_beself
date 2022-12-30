@@ -26,6 +26,56 @@ const products = [
     url: "./images/prueba2.jpg",
     stock: 5,
   },
+
+  {
+    id: 4,
+    title: "Tratamiento acne",
+    category: "cremas",
+    detail: "Crema antiage corporal",
+    price: 1700,
+    url: "./images/dermo/antiageCorporal_dermo.jpg",
+    stock: 5,
+  },
+
+  {
+    id: 5,
+    title: "Tratamiento acne",
+    category: "cremas",
+    detail: "Hidratación Termal",
+    price: 1700,
+    url: "./images/dermo/hidratacionTermal_dermo.jpg",
+    stock: 5,
+  },
+
+  {
+    id: 6,
+    title: "Tratamiento acne",
+    category: "cremas",
+    detail: "Poros dilatados",
+    price: 1700,
+    url: "./images/dermo/porosDilatados_dermo.jpg",
+    stock: 5,
+  },
+
+  {
+    id: 7,
+    title: "Tratamiento acne",
+    category: "cremas",
+    detail: "Crema con vitamina C",
+    price: 1700,
+    url: "./images/dermo/vitaminaC_dermo.jpg",
+    stock: 5,
+  },
+
+  {
+    id: 8,
+    title: "Tratamiento acne",
+    category: "cremas",
+    detail: "Crema con vitamina C Hyal",
+    price: 1700,
+    url: "./images/dermo/vitaminaCHyal_dermo.jpg",
+    stock: 5,
+  },
 ];
 
 const GetProducts = () => {
