@@ -11,8 +11,11 @@ function NavBar() {
 
   return (
     <header className="header">
-      <div className="div__logo">
-        <img className="logoBeSelf" src="/images/beSelfLogo.svg" alt="logoBeself" />
+      <div className="contenedorLogo">
+        <div className="divLogo">
+          <img className="logoSVGBeSelf" src="/images/beSelfTypographyBlue.svg" alt="logoBeself" />
+        </div>
+        <h2 className="logoDescription">ESTÉTICA CORPORAL Y FACIAL</h2>
       </div>
       <nav className="navBar">
         <ul className="unList">

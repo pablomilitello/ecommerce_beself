@@ -1,6 +1,6 @@
 .itemContainer {
     width: 15em;
-    height: 19em;
+    height: 20em;
     border-radius: 6px;
     background-color: #FFFFEE;
     margin: 20px 10px 10px 10px;
@@ -12,10 +12,6 @@
         transform: translate(-5px);
     }
 }
-
-
-
-
 
 .imgItemContainer {
     width: 15em;
@@ -34,5 +30,15 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    margin: 5px 0px;
+}
 
+.btnProduct {
+    border-radius: 6px;
+    width: 10em;
+    height: 2.3em;
+    background-color: #2C5784;
+    color: #FFFFFF;
+    font-weight: bold;
+    border: none;
 }

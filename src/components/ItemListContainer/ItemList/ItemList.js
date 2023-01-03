@@ -16,7 +16,7 @@ function ItemList() {
   });
 
   return (
-    <div className="div__itemlist">
+    <div className="divItemList">
       {arrayProducts.map((item) => (
         <Item key={item.id} item={item} />
       ))}

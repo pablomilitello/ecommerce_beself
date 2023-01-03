@@ -3,19 +3,17 @@ import React from "react";
 function Footer() {
   return (
     <footer className="footerConteiner">
-      <p class="footer__text">Copyright 2022 - BeSelf - Todos los derechos reservados</p>
-      <p class="footer__text">
-        Seguinos en nuestras <b>redes</b>
-      </p>
+      <p class="footerText">Copyright 2022 - BeSelf - Todos los derechos reservados</p>
+      <p class="footerText">Seguinos en nuestras redes</p>
       <div>
-        <a href="https://instagram.com" class="footer__text">
-          <img src=" ./images/social/logo-linkedin.svg" class="footer-img-social_networks" alt="logo-linkedin" />
+        <a href="https://instagram.com" className="footerText">
+          <img src=" ./images/social/logo-linkedin.svg" className="footerImgSocialNetworks" alt="logo-linkedin" />
         </a>
-        <a href="https://linkedin.com" class="footer__text">
-          <img src=" ./images/social/logo-instagram.svg" class="footer-img-social_networks" alt="logo-instagram" />
+        <a href="https://linkedin.com" className="footerText">
+          <img src=" ./images/social/logo-instagram.svg" className="footerImgSocialNetworks" alt="logo-instagram" />
         </a>
-        <a href="https://facebook.com" class="footer__text">
-          <img src="./images/social/logo-facebook.svg" class="footer-img-social_networks" alt="logo-facebook" />
+        <a href="https://facebook.com" className="footerText">
+          <img src="./images/social/logo-facebook.svg" className="footerImgSocialNetworks" alt="logo-facebook" />
         </a>
       </div>
     </footer>

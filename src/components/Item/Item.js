@@ -13,7 +13,7 @@ function Item(props) {
         <div className="descriptionCardContainer">{detail}</div>
         <p>$ {price}</p>
         <ItemCount stock={stock} />
-        <button className="btnProduct">Agregar al carrito</button>
+        <button className="btnProduct">Ver detalle</button>
       </div>
     </div>
   );
