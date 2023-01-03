@@ -1,43 +1,42 @@
 import React from "react";
 
-function Carrusel() {
+function SlideShow() {
   return (
-    <div className="carruselContainer">
-      <div className="carruselSlide">
-        <div className="Carrusel">
+    <div className="contenedorPrincipal">
+      <div className="contenedorSlideShow">
+        <div className="slide">
           <a href="/">
             <img className="imgCarrusel" src="./images/imagen1.jpeg" alt="imageCarrusel" />
           </a>
-          <div className="CarruselText">
+          <div className="slideText">
             <p>15% de descuento en todos los tratamientos</p>
           </div>
         </div>
-      </div>
-      <div className="carruselSlide">
-        <div className="Carrusel">
+
+        <div className="slide">
           <a href="/">
             <img className="imgCarrusel" src="./images/imagen11.jpeg" alt="imageCarrusel" />
           </a>
-          <div className="CarruselText">
+          <div className="slideText">
             <p>15% de descuento en todos los tratamientos</p>
           </div>
         </div>
-      </div>
-      <div className="carruselSlide">
-        <div className="Carrusel">
+
+        <div className="slide">
           <a href="/">
             <img className="imgCarrusel" src="./images/imagen12.jpeg" alt="imageCarrusel" />
           </a>
-          <div className="CarruselText">
+          <div className="CslideText">
             <p>15% de descuento en todos los tratamientos</p>
           </div>
         </div>
       </div>
-      <div>
-        <button>
+
+      <div className="controls">
+        <button className="btn left">
           <img className="arrows" src="./images/arrows/arrow-left-svg.svg" alt="arrow left" />
         </button>
-        <button>
+        <button className="btn right">
           <img className="arrows" src="./images/arrows/arrow-right-svg.svg" alt="arrow right" />
         </button>
       </div>
@@ -45,4 +44,4 @@ function Carrusel() {
   );
 }
 
-export default Carrusel;
+export default SlideShow;
