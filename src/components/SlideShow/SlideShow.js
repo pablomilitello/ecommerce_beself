@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useRef } from "react";
+
+const siguiente = () => {
+  console.log("Siguiente");
+};
+
+const anterior = () => {
+  console.log("Anterior");
+};
 
 function SlideShow() {
+  const slideshow = useRef(null);
   return (
     <div className="contenedorPrincipal">
-      <div className="contenedorSlideShow">
+      <div className="contenedorSlideShow" ref={slideshow}>
         <div className="slide">
           <a href="/">
             <img className="imgCarrusel" src="./images/imagen1.jpeg" alt="imageCarrusel" />
@@ -33,10 +42,10 @@ function SlideShow() {
       </div>
 
       <div className="controls">
-        <button className="btn left">
+        <button onClick={anterior} className="btn left">
           <img className="arrows" src="./images/arrows/arrow-left-svg.svg" alt="arrow left" />
         </button>
-        <button className="btn right">
+        <button onClick={siguiente} className="btn right">
           <img className="arrows" src="./images/arrows/arrow-right-svg.svg" alt="arrow right" />
         </button>
       </div>

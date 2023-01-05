@@ -3,8 +3,8 @@ import React from "react";
 function Footer() {
   return (
     <footer className="footerConteiner">
-      <p class="footerText">Copyright 2022 - BeSelf - Todos los derechos reservados</p>
-      <p class="footerText">Seguinos en nuestras redes</p>
+      <p className="footerText">Copyright 2022 - BeSelf - Todos los derechos reservados</p>
+      <p className="footerText">Seguinos en nuestras redes</p>
       <div>
         <a href="https://instagram.com" className="footerText">
           <img src=" ./images/social/logo-linkedin.svg" className="footerImgSocialNetworks" alt="logo-linkedin" />
