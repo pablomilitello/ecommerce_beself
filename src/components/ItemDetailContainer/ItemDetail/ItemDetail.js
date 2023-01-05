@@ -1,8 +1,7 @@
-//import ItemCount from "../ItemCount/ItemCount.js";
+import React from "react";
+import ItemCount from "../../ItemCount/ItemCount";
 
-function Item(props) {
-  const { title, detail, price, url } = props.item;
-
+function ItemDetail({ title, detail, price, url, stock }) {
   return (
     <div className="itemContainer">
       <div className="imgItemContainer">
@@ -12,11 +11,10 @@ function Item(props) {
         <h3 className="titleCardContainer">{title}</h3>
         <div className="descriptionCardContainer">{detail}</div>
         <p>$ {price}</p>
-        {/* <ItemCount stock={stock} /> */}
-        <button className="btnProduct">Ver detalle</button>
+        <ItemCount stock={stock} />
       </div>
     </div>
   );
 }
 
-export default Item;
+export default ItemDetail;

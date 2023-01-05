@@ -14,12 +14,14 @@ import NavBar from "../src/components/NavBar/NavBar.js";
 import ItemListContainer from "../src/components/ItemListContainer/ItemListContainer.js";
 import SlideShow from "./components/SlideShow/SlideShow.js";
 import Footer from "../src/components/Footer/Footer.js";
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 
 function App() {
   return (
     <>
       <NavBar />
       <ItemListContainer />
+      <ItemDetailContainer />
       <main className="App">
         <p className="SlideShowText">Productos Destacados</p>
         <SlideShow />

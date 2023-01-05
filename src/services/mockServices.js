@@ -89,4 +89,14 @@ const GetProducts = () => {
   });
 };
 
+const GetProduct = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(products[0]);
+    }, 2000);
+  });
+};
+
 export default GetProducts;
+
+export { GetProduct };
