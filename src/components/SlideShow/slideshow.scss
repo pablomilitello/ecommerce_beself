@@ -82,3 +82,16 @@
     filter: drop-shadow(2px 0px 0px #FFFFFF);
 
 }
+
+.slideShowText {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+main {
+    max-width: 1000px;
+    margin: 50px auto;
+    overflow: hidden;
+}

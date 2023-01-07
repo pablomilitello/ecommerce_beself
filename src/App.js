@@ -15,18 +15,36 @@ import ItemListContainer from "../src/components/ItemListContainer/ItemListConta
 import SlideShow from "./components/SlideShow/SlideShow.js";
 import Footer from "../src/components/Footer/Footer.js";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <>
-      <NavBar />
-      <ItemListContainer />
-      <ItemDetailContainer />
-      <main className="App">
-        <p className="SlideShowText">Productos Destacados</p>
+      <BrowserRouter>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<ItemListContainer />}></Route>
+          <Route path="/detail/:productID" element={<ItemDetailContainer />}></Route>
+
+          <Route
+            path="/we"
+            element={
+              <div>
+                <h2>Nosotros</h2>
+              </div>
+            }></Route>
+
+          <Route
+            path="/contact"
+            element={
+              <div>
+                <h2>Contactanos</h2>
+              </div>
+            }></Route>
+        </Routes>
         <SlideShow />
-      </main>
-      <Footer />
+        <Footer />
+      </BrowserRouter>
     </>
   );
 }

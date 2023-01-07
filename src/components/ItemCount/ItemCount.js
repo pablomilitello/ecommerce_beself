@@ -14,11 +14,11 @@ function ItemCount(props) {
   return (
     <div className="itemCountContainer">
       <span className="spanCount" onClick={handleSubstract}>
-        <img className="imgCount" src="./images/substract.svg" alt="img_substract" />
+        <img className="imgCount" src="../images/substract.svg" alt="img_substract" />
       </span>
       <span className="spanCount">{count}</span>
       <span className="spanCount" onClick={handleAdd}>
-        <img className="imgCount" src="./images/add.svg" alt="img_add" />
+        <img className="imgCount" src="../images/add.svg" alt="img_add" />
       </span>
     </div>
   );

@@ -5,7 +5,7 @@ const products = [
     category: "tratamientos",
     detail: "Mejora el cutis",
     price: 1500,
-    url: "./images/imagen11.jpeg",
+    url: "../images/imagen11.jpeg",
     stock: 4,
   },
   {
@@ -14,7 +14,7 @@ const products = [
     category: "tratamientos",
     detail: "Anti stress",
     price: 1200,
-    url: "./images/prueba3.jpg",
+    url: "../images/prueba3.jpg",
     stock: 7,
   },
   {
@@ -23,7 +23,7 @@ const products = [
     category: "tratamientos",
     detail: "Suavisa tu rostro",
     price: 1700,
-    url: "./images/prueba2.jpg",
+    url: "../images/prueba2.jpg",
     stock: 5,
   },
 
@@ -33,7 +33,7 @@ const products = [
     category: "cremas",
     detail: "Crema antiage corporal",
     price: 1700,
-    url: "./images/dermo/antiageCorporal_dermo.jpg",
+    url: "../images/dermo/antiageCorporal_dermo.jpg",
     stock: 5,
   },
 
@@ -43,7 +43,7 @@ const products = [
     category: "cremas",
     detail: "Hidratación Termal",
     price: 1700,
-    url: "./images/dermo/hidratacionTermal_dermo.jpg",
+    url: "../images/dermo/hidratacionTermal_dermo.jpg",
     stock: 5,
   },
 
@@ -53,7 +53,7 @@ const products = [
     category: "cremas",
     detail: "Poros dilatados",
     price: 1700,
-    url: "./images/dermo/porosDilatados_dermo.jpg",
+    url: "../images/dermo/porosDilatados_dermo.jpg",
     stock: 5,
   },
 
@@ -63,7 +63,7 @@ const products = [
     category: "cremas",
     detail: "Crema con vitamina C",
     price: 1700,
-    url: "./images/dermo/vitaminaC_dermo.jpg",
+    url: "../images/dermo/vitaminaC_dermo.jpg",
     stock: 5,
   },
 
@@ -73,14 +73,13 @@ const products = [
     category: "cremas",
     detail: "Crema con vitamina C Hyal",
     price: 1700,
-    url: "./images/dermo/vitaminaCHyal_dermo.jpg",
+    url: "../images/dermo/vitaminaCHyal_dermo.jpg",
     stock: 5,
   },
 ];
 
 const GetProducts = () => {
   return new Promise((resolve, reject) => {
-    console.log("Conecting to backend.....");
     let error = false;
     setTimeout(() => {
       if (error) reject("Usuario no autorizado");
@@ -89,10 +88,13 @@ const GetProducts = () => {
   });
 };
 
-const GetProduct = () => {
-  return new Promise((resolve, reject) => {
+const GetProduct = (idURL) => {
+  return new Promise((resolve) => {
+    const requestItem = products.find((item) => {
+      return item.id === Number(idURL);
+    });
     setTimeout(() => {
-      resolve(products[0]);
+      resolve(requestItem);
     }, 2000);
   });
 };

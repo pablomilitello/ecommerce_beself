@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
+import { useParams } from "react-router";
 import { GetProduct } from "../../services/mockServices";
 import ItemDetail from "./ItemDetail/ItemDetail";
 
 function ItemDetailContainer() {
   const [product, setProduct] = useState([]);
+  let params = useParams();
+  console.log(params);
   useEffect(() => {
-    GetProduct()
+    GetProduct(params.productID)
       .then((response) => {
         setProduct(response);
       }, [])
@@ -13,8 +16,6 @@ function ItemDetailContainer() {
         alert(error);
       });
   });
-
-  console.log(product);
 
   return (
     <ItemDetail

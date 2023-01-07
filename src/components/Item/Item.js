@@ -1,7 +1,7 @@
-//import ItemCount from "../ItemCount/ItemCount.js";
+import { Link } from "react-router-dom";
 
 function Item(props) {
-  const { title, detail, price, url } = props.item;
+  const { id, title, detail, price, url } = props.item;
 
   return (
     <div className="itemContainer">
@@ -12,8 +12,9 @@ function Item(props) {
         <h3 className="titleCardContainer">{title}</h3>
         <div className="descriptionCardContainer">{detail}</div>
         <p>$ {price}</p>
-        {/* <ItemCount stock={stock} /> */}
-        <button className="btnProduct">Ver detalle</button>
+        <Link to={`/detail/${id}`}>
+          <button className="btnProduct">Ver detalle</button>
+        </Link>
       </div>
     </div>
   );
