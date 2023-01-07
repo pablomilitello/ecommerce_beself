@@ -19,6 +19,7 @@ function ItemDetailContainer() {
 
   return (
     <ItemDetail
+      className="itemDetailContainer"
       title={product.title}
       detail={product.detail}
       price={product.price}

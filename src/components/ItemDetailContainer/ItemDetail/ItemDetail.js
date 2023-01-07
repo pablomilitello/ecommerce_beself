@@ -5,13 +5,13 @@ function ItemDetail(props) {
   const { title, detail, price, url, stock } = props;
   console.log(props);
   return (
-    <div className="itemContainer">
-      <div className="imgItemContainer">
-        <img className="imgItemProducto" src={url} alt="imgCardProduct" />
+    <div className="itemDetailContainer">
+      <div className="imgItemDetailContainer">
+        <img className="imgItemDetailProduct" src={url} alt="imgCardProduct" />
       </div>
-      <div className="divDataItem">
-        <h3 className="titleCardContainer">{title}</h3>
-        <div className="descriptionCardContainer">{detail}</div>
+      <div className="divDataItemDetail">
+        <h3 className="titleCardDetailContainer">{title}</h3>
+        <div className="descriptionCardDetailContainer">{detail}</div>
         <p>$ {price}</p>
         <ItemCount stock={stock} />
       </div>

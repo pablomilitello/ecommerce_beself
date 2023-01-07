@@ -4,6 +4,7 @@ import "./styles/App.scss";
 import "../src/components/CartWidget/cartwidget.scss";
 import "../src/components/NavBar/navbar.scss";
 import "../src/components/Footer/footer.scss";
+import "../src/components/ItemDetailContainer/ItemDetail/itemdetail.scss";
 import "./components/ItemListContainer/ItemList/itemlist.scss";
 import "../src/components/SlideShow/slideshow.scss";
 import "../src/components/ItemListContainer/itemlistcontainer.scss";
@@ -23,7 +24,14 @@ function App() {
       <BrowserRouter>
         <NavBar />
         <Routes>
-          <Route path="/" element={<ItemListContainer />}></Route>
+          <Route
+            path="/"
+            element={
+              <>
+                <ItemListContainer />
+                <SlideShow />
+              </>
+            }></Route>
           <Route path="/detail/:productID" element={<ItemDetailContainer />}></Route>
 
           <Route
@@ -42,7 +50,7 @@ function App() {
               </div>
             }></Route>
         </Routes>
-        <SlideShow />
+
         <Footer />
       </BrowserRouter>
     </>
