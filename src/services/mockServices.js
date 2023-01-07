@@ -1,9 +1,11 @@
 const products = [
   {
     id: 1,
-    title: "Tratamiento Facial",
+    title: "Peelling",
     category: "tratamientos",
-    detail: "Mejora el cutis",
+    detail: "Exfoliación",
+    detailTreatments:
+      "Tratamiento para dar mayor luminosidad a la piel, mejorar la permeabilidad de la empidermis logrando mejor aceptación de principios activos",
     price: 1500,
     url: "../images/imagen11.jpeg",
     stock: 4,
@@ -12,16 +14,19 @@ const products = [
     id: 2,
     title: "Masajes faciales",
     category: "tratamientos",
-    detail: "Anti stress",
+    detail: "Anti age / DLM",
+    detailTreatments:
+      "Masaje Anti age: Mejora el aspecto del cutis mediante una mayor estimulación de la circulación sanguinea la cual permite una mejor nutrición del tejido. Masaje DLM: Maniobras que permmiten drenar edema localizado y/o impurezas del tejido permitiendo una buena descongestión en las distintas zonas del rostro",
     price: 1200,
     url: "../images/prueba3.jpg",
     stock: 7,
   },
   {
     id: 3,
-    title: "Tratamiento acne",
+    title: "Radiofrecuencia",
     category: "tratamientos",
-    detail: "Suavisa tu rostro",
+    detail: "Tratamiento anti age",
+    detailTreatments: "Tratamiento para reestructurar tejido mediante la estimulación de fibras colágenas",
     price: 1700,
     url: "../images/prueba2.jpg",
     stock: 5,
