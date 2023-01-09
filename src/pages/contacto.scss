@@ -1,0 +1,36 @@
+.contact {
+    width: 20em;
+    height: 27em;
+    background-color: #c9c5cb;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 4px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.field {
+    padding: 0.5rem;
+    width: 17rem;
+    margin: 0.6rem 0rem;
+
+    &:focus {
+        border-color: #073b4c;
+    }
+}
+
+.text__contact {
+    text-align: center;
+    font-weight: bolder;
+}
+
+.div__form__contact {
+    text-align: center;
+}
+
+.section__h3__contact {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bolder;
+    padding: 1rem 0rem 0.5rem 0rem;
+}
