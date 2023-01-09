@@ -1,19 +1,27 @@
 import { useState, useEffect } from "react";
-import GetProducts from "../../../services/mockServices.js";
+import GetProducts, { GetProductByCategory } from "../../../services/mockServices.js";
 import Item from "../../Item/Item.js";
+import { useParams } from "react-router-dom";
 
 function ItemList() {
   const [arrayProducts, setArrayProducts] = useState([]);
+  let { categoryID } = useParams();
 
   useEffect(() => {
-    GetProducts()
-      .then((response, reject) => {
+    if (!categoryID) {
+      GetProducts()
+        .then((response) => {
+          setArrayProducts(response);
+        })
+        .catch((error) => {
+          alert(error);
+        });
+    } else {
+      GetProductByCategory(categoryID).then((response) => {
         setArrayProducts(response);
-      }, [])
-      .catch((error) => {
-        alert(error);
       });
-  });
+    }
+  }, [categoryID]);
 
   return (
     <div className="divItemList">

@@ -5,8 +5,8 @@ function NavBar() {
   const linksNavBar = [
     { title: "Inicio", url: "/" },
     { title: "Nosotros", url: "/we" },
-    { title: "Tratamientos", url: "/treatments" },
-    { title: "Productos", url: "/products" },
+    { title: "Tratamientos", url: "/category/treatments" },
+    { title: "Productos", url: "/category/products" },
     { title: "Contacto", url: "/contact" },
   ];
 

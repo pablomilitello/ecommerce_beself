@@ -2,8 +2,7 @@ import React from "react";
 import ItemCount from "../../ItemCount/ItemCount";
 
 function ItemDetail(props) {
-  const { title, detailTreatments, price, url, stock } = props;
-  console.log(props);
+  const { title, detail, bigDetail, price, url, stock } = props;
   return (
     <div className="itemDetailContainer">
       <div className="imgItemDetailContainer">
@@ -11,7 +10,7 @@ function ItemDetail(props) {
       </div>
       <div className="divDataItemDetail">
         <h3 className="titleCardDetailContainer">{title}</h3>
-        <div className="descriptionCardDetailContainer">{detailTreatments}</div>
+        <div className="descriptionCardDetailContainer">{detail + ": " + bigDetail}</div>
         <p>$ {price}</p>
         <ItemCount stock={stock} />
       </div>

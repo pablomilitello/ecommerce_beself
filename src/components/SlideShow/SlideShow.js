@@ -2,11 +2,11 @@ import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 
 const siguiente = () => {
-  console.log("Siguiente");
+  //console.log("Siguiente");
 };
 
 const anterior = () => {
-  console.log("Anterior");
+  //console.log("Anterior");
 };
 
 function SlideShow() {

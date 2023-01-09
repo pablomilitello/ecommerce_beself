@@ -6,7 +6,6 @@ import ItemDetail from "./ItemDetail/ItemDetail";
 function ItemDetailContainer() {
   const [product, setProduct] = useState([]);
   let params = useParams();
-  console.log(params);
   useEffect(() => {
     GetProduct(params.productID)
       .then((response) => {
@@ -19,9 +18,9 @@ function ItemDetailContainer() {
 
   return (
     <ItemDetail
-      className="itemDetailContainer"
       title={product.title}
       detail={product.detail}
+      bigDetail={product.bigDetail}
       price={product.price}
       url={product.url}
       stock={product.stock}
