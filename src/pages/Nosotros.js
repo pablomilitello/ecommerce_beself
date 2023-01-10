@@ -10,13 +10,13 @@ function Nosotros() {
         <b>YO</b> interior con algo que se pudiera perpetuar en el tiempo. Sembrar ese "no se qué" en el otro, que
         genere inquietud, movimiento y transformación.
       </p>
-      <br></br>
-      <p>
+
+      <p className="weText">
         Si bien la estética logra modificaciones o cambios superficiales, la búsqueda va más allá de lo tangible y
         visible a los ojos del mundo. Ello tiene que ver con la belleza interior.
       </p>
-      <br></br>
-      <p>
+
+      <p className="weText">
         Be Self abre sus puertas a toda aquella persona que desee encontrar ese cambio que nos conecta con nuestra
         identidad, con <b>SER UNO MISMO</b>.
       </p>

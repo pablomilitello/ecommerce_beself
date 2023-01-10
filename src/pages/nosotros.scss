@@ -1,11 +1,16 @@
 .weContainer {
-    width: 60em;
+    width: 100%;
     height: 20em;
     margin: 50px auto;
-    //background-color: #DCDCDD;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image: url("../../public/images/prueba1.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+
 }
 
 .weTitle {
@@ -13,4 +18,9 @@
     margin: 10px 0px;
 }
 
-.weText {}
+.weText {
+    width: 70%;
+    text-align: justify;
+    padding: 10px 0px;
+
+}

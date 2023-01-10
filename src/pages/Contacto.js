@@ -18,7 +18,9 @@ function Contacto() {
             name="comentario"
             className="textarea__text field"
             placeholder="Dejanos tu consulta aquí:"></textarea>
-          <input type="submit" value="Enviar Datos" className="btn btn-primary btn__contact textarea__text field" />
+          <button type="submit" value="Enviar Datos" className="contactBtn">
+            Enviar Datos
+          </button>
         </div>
       </form>
     </>
