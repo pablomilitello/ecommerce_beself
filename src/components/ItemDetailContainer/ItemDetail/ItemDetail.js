@@ -1,5 +1,6 @@
 import React from "react";
 import ItemCount from "../../ItemCount/ItemCount";
+import "./itemdetail.scss";
 
 function ItemDetail(props) {
   const { title, detail, bigDetail, price, url, stock } = props;

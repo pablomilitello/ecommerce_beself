@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "./cartwidget.scss";
 
 function CartWidget() {
   return (

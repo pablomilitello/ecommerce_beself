@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { Link } from "react-router-dom";
+import "./slideshow.scss";
 
 const siguiente = () => {
   //console.log("Siguiente");

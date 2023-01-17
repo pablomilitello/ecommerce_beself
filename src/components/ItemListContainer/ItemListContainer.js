@@ -1,4 +1,5 @@
 import ItemList from "./ItemList/ItemList.js";
+import "./itemlistcontainer.scss";
 
 function ItemListContainer() {
   return (

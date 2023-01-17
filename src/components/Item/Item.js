@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import Button from "../Button/Button";
+import "./item.scss";
 
 function Item(props) {
   const { id, title, detail, price, url } = props.item;
@@ -13,7 +15,8 @@ function Item(props) {
         <div className="descriptionCardContainer">{detail}</div>
         <p>$ {price}</p>
         <Link to={`/detail/${id}`}>
-          <button className="btnProduct">Ver detalle</button>
+          {/* <button className="btnProduct">Ver detalle</button> */}
+          <Button />
         </Link>
       </div>
     </div>
