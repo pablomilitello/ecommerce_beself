@@ -3,7 +3,8 @@ import ItemCount from "../../ItemCount/ItemCount";
 import "./itemdetail.scss";
 
 function ItemDetail(props) {
-  const { title, detail, bigDetail, price, url, stock } = props;
+  const { title, detail, bigDetail, price, url, stock, onAddToCart } = props;
+
   return (
     <div className="itemDetailContainer">
       <div className="imgItemDetailContainer">
@@ -13,7 +14,7 @@ function ItemDetail(props) {
         <h3 className="titleCardDetailContainer">{title}</h3>
         <div className="descriptionCardDetailContainer">{detail + ": " + bigDetail}</div>
         <p>Precio Unitario: $ {price}</p>
-        <ItemCount stock={stock} />
+        <ItemCount stock={stock} onAddToCart={onAddToCart} />
       </div>
     </div>
   );

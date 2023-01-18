@@ -7,6 +7,11 @@ import "./itemDetailContainer.scss";
 function ItemDetailContainer() {
   const [product, setProduct] = useState([]);
   let params = useParams();
+
+  function handleAddToCart(count) {
+    console.log(`Se agregaron al carrito ${count} unidades del producto ${product.title}`);
+  }
+
   useEffect(() => {
     GetProduct(params.productID)
       .then((response) => {
@@ -19,6 +24,7 @@ function ItemDetailContainer() {
 
   return (
     <ItemDetail
+      onAddToCart={handleAddToCart}
       className="itemDetailContainer"
       title={product.title}
       detail={product.detail}

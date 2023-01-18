@@ -1,6 +1,7 @@
 import CartWidget from "../CartWidget/CartWidget.js";
 import { Link } from "react-router-dom";
 import "./navbar.scss";
+import Button from "../Button/Button.js";
 
 function NavBar() {
   const linksNavBar = [
@@ -10,6 +11,10 @@ function NavBar() {
     { title: "Productos", url: "/category/products" },
     { title: "Contacto", url: "/contact" },
   ];
+
+  function LoginSession() {
+    console.log("--> Te has logueado con éxito");
+  }
 
   return (
     <header className="header">
@@ -31,6 +36,7 @@ function NavBar() {
           </li>
         </ul>
       </nav>
+      <Button onClick={LoginSession} color="#F0C808" padding="10px 20px" text="Login" />
       <CartWidget />
     </header>
   );
