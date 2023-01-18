@@ -12,7 +12,7 @@ function ItemDetail(props) {
       <div className="divDataItemDetail">
         <h3 className="titleCardDetailContainer">{title}</h3>
         <div className="descriptionCardDetailContainer">{detail + ": " + bigDetail}</div>
-        <p>$ {price}</p>
+        <p>Precio Unitario: $ {price}</p>
         <ItemCount stock={stock} />
       </div>
     </div>

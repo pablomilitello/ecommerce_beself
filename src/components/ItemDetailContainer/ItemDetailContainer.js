@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import { GetProduct } from "../../services/mockServices";
 import ItemDetail from "./ItemDetail/ItemDetail";
+import "./itemDetailContainer.scss";
 
 function ItemDetailContainer() {
   const [product, setProduct] = useState([]);
@@ -18,6 +19,7 @@ function ItemDetailContainer() {
 
   return (
     <ItemDetail
+      className="itemDetailContainer"
       title={product.title}
       detail={product.detail}
       bigDetail={product.bigDetail}

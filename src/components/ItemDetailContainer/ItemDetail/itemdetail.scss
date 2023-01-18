@@ -1,6 +1,6 @@
 .itemDetailContainer {
-    width: 40em;
-    height: 30em;
+    width: 35em;
+    height: 25em;
     border-radius: 6px;
     background-color: #FFFFEE;
     margin: 40px auto;
@@ -28,7 +28,12 @@
 .divDataItemDetail {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
-    margin: 5px 0px;
+    justify-content: center;
+}
+
+.descriptionCardDetailContainer {
+    font-size: 0.9em;
+    width: 90%;
+    margin: auto;
 }

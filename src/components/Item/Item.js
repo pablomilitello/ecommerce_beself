@@ -15,8 +15,7 @@ function Item(props) {
         <div className="descriptionCardContainer">{detail}</div>
         <p>$ {price}</p>
         <Link to={`/detail/${id}`}>
-          {/* <button className="btnProduct">Ver detalle</button> */}
-          <Button />
+          <Button text="Ver detalle" color="#2C5784" padding="6px" />
         </Link>
       </div>
     </div>

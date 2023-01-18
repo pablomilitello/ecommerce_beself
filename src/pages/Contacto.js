@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../components/Button/Button";
 import "./contacto.scss";
 
 function Contacto() {
@@ -18,9 +19,7 @@ function Contacto() {
             name="comentario"
             className="textarea__text field"
             placeholder="Dejanos tu consulta aquí:"></textarea>
-          <button type="submit" value="Enviar Datos" className="contactBtn">
-            Enviar Datos
-          </button>
+          <Button text="Enviar Datos" />
         </div>
       </form>
     </>

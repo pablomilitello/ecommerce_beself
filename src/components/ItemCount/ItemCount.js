@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from "../Button/Button";
 import "./itemcount.scss";
 
 function ItemCount(props) {
@@ -13,15 +14,16 @@ function ItemCount(props) {
   }
 
   return (
-    <div className="itemCountContainer">
-      <span className="spanCount" onClick={handleSubstract}>
-        <img className="imgCount" src="../images/substract.svg" alt="img_substract" />
-      </span>
-      <span className="spanCount">{count}</span>
-      <span className="spanCount" onClick={handleAdd}>
-        <img className="imgCount" src="../images/add.svg" alt="img_add" />
-      </span>
-    </div>
+    <>
+      <div className="itemCountContainer">
+        <div>
+          <Button className="spanCount" color="#2C5784" padding="1em 1em" onClick={handleSubstract} text="-" />
+          <span className="spanCount">{count}</span>
+          <Button className="spanCount" color="#2C5784" padding="1em 1em" onClick={handleAdd} text="+" />
+        </div>
+        <Button color="#2C5784" padding="0.3em" text="Agregar al carrito" />
+      </div>
+    </>
   );
 }
 

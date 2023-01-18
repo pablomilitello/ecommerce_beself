@@ -1,9 +1,16 @@
 import "./button.scss";
 
-import React from "react";
+function Button(props) {
+  let styleButton = {
+    backgroundColor: props.color,
+    padding: props.padding,
+  };
 
-function Button() {
-  return <button className="btnProduct">Ver detalle</button>;
+  return (
+    <button onClick={props.onClick} className="btnProduct" style={styleButton}>
+      {props.text}
+    </button>
+  );
 }
 
 export default Button;
