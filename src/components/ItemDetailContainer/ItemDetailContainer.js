@@ -1,15 +1,22 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router";
 import { GetProduct } from "../../services/mockServices";
 import ItemDetail from "./ItemDetail/ItemDetail";
 import "./itemDetailContainer.scss";
+import { cartContext } from "../../storage/cartContext";
 
 function ItemDetailContainer() {
   const [product, setProduct] = useState([]);
   let params = useParams();
 
+  const { addToCart, clearCart } = useContext(cartContext);
+
   function handleAddToCart(count) {
-    console.log(`Se agregaron al carrito ${count} unidades del producto ${product.title}`);
+    addToCart({ ...product, count: count });
+  }
+
+  function handleClearCart(count) {
+    clearCart({ ...product, count: count });
   }
 
   useEffect(() => {
@@ -25,6 +32,7 @@ function ItemDetailContainer() {
   return (
     <ItemDetail
       onAddToCart={handleAddToCart}
+      onClearCart={handleClearCart}
       className="itemDetailContainer"
       title={product.title}
       detail={product.detail}
