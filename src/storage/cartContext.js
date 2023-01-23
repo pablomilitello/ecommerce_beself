@@ -39,7 +39,7 @@ function CartProvider(props) {
     let totalPrice = 100;
     console.log(`El precio total del carrito es ${totalPrice}`);
 
-    return totalPrice;
+    return 1000;
   }
 
   return (

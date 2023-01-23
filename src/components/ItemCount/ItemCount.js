@@ -3,7 +3,7 @@ import Button from "../Button/Button";
 import "./itemcount.scss";
 
 function ItemCount(props) {
-  const { stock, onAddToCart, onClearCart } = props;
+  const { stock, onAddToCart } = props;
   const [count, setCount] = useState(1);
 
   function handleAdd() {
@@ -24,7 +24,6 @@ function ItemCount(props) {
           <Button className="spanCount" color="#2C5784" padding="0.5em 1em" onClick={handleAdd} text="+" />
         </div>
         <Button onClick={() => onAddToCart(count)} color="#2C5784" padding="0.3em" text="Agregar al carrito" />
-        <Button onClick={() => onClearCart(count)} color="#2C5784" padding="0.3em" text="Eliminar carrito" />
       </div>
     </>
   );

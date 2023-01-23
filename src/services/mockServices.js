@@ -9,6 +9,7 @@ const products = [
     price: 1500,
     url: "../images/imagen11.jpeg",
     stock: 4,
+    discount: 30,
   },
   {
     id: 2,
@@ -20,6 +21,7 @@ const products = [
     price: 1200,
     url: "../images/prueba3.jpg",
     stock: 7,
+    discount: 0,
   },
   {
     id: 3,
@@ -30,6 +32,7 @@ const products = [
     price: 1700,
     url: "../images/prueba2.jpg",
     stock: 5,
+    discount: 15,
   },
 
   {
@@ -42,6 +45,7 @@ const products = [
     price: 1700,
     url: "../images/dermo/antiageCorporal_dermo.jpg",
     stock: 5,
+    discount: 0,
   },
 
   {
@@ -54,6 +58,7 @@ const products = [
     price: 1700,
     url: "../images/dermo/hidratacionTermal_dermo.jpg",
     stock: 5,
+    discount: 20,
   },
 
   {
@@ -66,6 +71,7 @@ const products = [
     price: 1700,
     url: "../images/dermo/porosDilatados_dermo.jpg",
     stock: 5,
+    discount: 0,
   },
 
   {
@@ -78,6 +84,7 @@ const products = [
     price: 1700,
     url: "../images/dermo/vitaminaC_dermo.jpg",
     stock: 5,
+    discount: 40,
   },
 
   {
@@ -90,6 +97,7 @@ const products = [
     price: 1700,
     url: "../images/dermo/vitaminaCHyal_dermo.jpg",
     stock: 5,
+    discount: 0,
   },
 ];
 

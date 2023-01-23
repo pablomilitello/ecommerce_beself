@@ -12,6 +12,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import PageNotFound from "./components/PageNotFound/PageNotFound.js";
 import Contacto from "./pages/Contacto";
 import Nosotros from "./pages/Nosotros";
+import CartContainer from "./components/CartContainer/CartContainer";
 //import app from "./services/firebase";
 
 //console.log(app);
@@ -35,6 +36,7 @@ function App() {
             <Route path="/category/:categoryID" element={<ItemListContainer />}></Route>
             <Route path="/we" element={<Nosotros />}></Route>
             <Route path="/contact" element={<Contacto />}></Route>
+            <Route path="/cart" element={<CartContainer />}></Route>
             <Route path="*" element={<PageNotFound />}></Route>
           </Routes>
           <Footer />
