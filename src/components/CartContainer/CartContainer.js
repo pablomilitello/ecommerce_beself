@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import Button from "../Button/Button";
 import { cartContext } from "../../storage/cartContext";
 import "./cartContainer.scss";
+import { Link } from "react-router-dom";
 
 function CartContainer() {
   const { cart, removeItem, clearCart, getTotalPriceInCart } = useContext(cartContext);
@@ -41,7 +42,9 @@ function CartContainer() {
           <div className="cartButtons">
             <Button padding="5px 10px" text="Finalizar compra" color="blue" />
             <Button onClick={clearCart} padding="2px 4px" color="red" text="Vaciar carrito"></Button>
-            <Button padding="2px 4px" color="green" text="Seguir comprando"></Button>
+            <Link to="/">
+              <Button padding="2px 4px" color="green" text="Segui comprando"></Button>
+            </Link>
           </div>
         </div>
       </div>

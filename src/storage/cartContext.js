@@ -22,8 +22,8 @@ function CartProvider(props) {
   function removeItem(itemToRemove) {
     let newCart = [...cart];
     let isInCart = newCart.findIndex((itemInCart) => itemInCart.id === itemToRemove.id);
-    console.log("-->", isInCart);
-    setCart(newCart.splice(isInCart, 1));
+    newCart.splice(isInCart, 1);
+    setCart([...newCart]);
   }
 
   function clearCart() {
@@ -37,8 +37,11 @@ function CartProvider(props) {
   }
 
   function getTotalPriceInCart() {
-    let totalPrice = 1700;
-
+    let items = [...cart];
+    let totalPrice = 0;
+    items.forEach((item) => {
+      totalPrice += item.price * item.count;
+    });
     return totalPrice;
   }
 

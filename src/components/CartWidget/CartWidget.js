@@ -5,7 +5,6 @@ import "./cartwidget.scss";
 
 function CartWidget() {
   const context = useContext(cartContext);
-  console.log(context.cart);
 
   return (
     <Link to="/cart" className="container__widget">

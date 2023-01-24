@@ -14,7 +14,10 @@ function ItemDetailContainer() {
 
   const [isLoading, setIsLoading] = useState(true);
 
+  const [isInCart, setIsInCart] = useState(false);
+
   function handleAddToCart(count) {
+    setIsInCart(true);
     addToCart({ ...product, count: count });
   }
 
@@ -41,6 +44,7 @@ function ItemDetailContainer() {
         <Loader />
       ) : (
         <ItemDetail
+          isInCart={isInCart}
           onAddToCart={handleAddToCart}
           onClearCart={handleClearCart}
           className="itemDetailContainer"
