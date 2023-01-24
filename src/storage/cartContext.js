@@ -10,7 +10,7 @@ function CartProvider(props) {
 
     if (isInCart !== -1) {
       let newCart = [...cart];
-      newCart[isInCart].count += 1;
+      newCart[isInCart].count += item.count;
       setCart(newCart);
     } else {
       let newCart = [...cart];
@@ -19,9 +19,11 @@ function CartProvider(props) {
     }
   }
 
-  function removeItem(itemId) {
-    //let isInCart = cart.findIndex((itemInCart) => itemInCart.id === itemId.id);
-    console.log("El item está removido");
+  function removeItem(itemToRemove) {
+    let newCart = [...cart];
+    let isInCart = newCart.findIndex((itemInCart) => itemInCart.id === itemToRemove.id);
+    console.log("-->", isInCart);
+    setCart(newCart.splice(isInCart, 1));
   }
 
   function clearCart() {
@@ -30,16 +32,14 @@ function CartProvider(props) {
 
   function getTotalItemsInCart() {
     let total = 0;
-    console.log(`El total de items del carrito es ${total}`);
     cart.forEach((product) => (total += product.count));
     return total;
   }
 
   function getTotalPriceInCart() {
-    let totalPrice = 100;
-    console.log(`El precio total del carrito es ${totalPrice}`);
+    let totalPrice = 1700;
 
-    return 1000;
+    return totalPrice;
   }
 
   return (
