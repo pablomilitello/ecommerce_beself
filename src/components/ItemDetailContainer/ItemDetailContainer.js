@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router";
-import { GetProduct } from "../../services/mockServices";
+import { GetProduct } from "../../services/firebase";
 import ItemDetail from "./ItemDetail/ItemDetail";
 import "./itemDetailContainer.scss";
 import { cartContext } from "../../storage/cartContext";

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import GetProducts, { GetProductByCategory } from "../../../services/mockServices.js";
+import { GetProductByCategory } from "../../../services/firebase.js";
+import { GetProducts } from "../../../services/firebase.js";
 import Item from "../../Item/Item.js";
 import { useParams } from "react-router-dom";
 import "./itemlist.scss";

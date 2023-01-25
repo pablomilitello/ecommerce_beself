@@ -13,9 +13,9 @@ import PageNotFound from "./components/PageNotFound/PageNotFound.js";
 import Contacto from "./pages/Contacto";
 import Nosotros from "./pages/Nosotros";
 import CartContainer from "./components/CartContainer/CartContainer";
-import app from "./services/firebase";
+import { GetProducts } from "./services/firebase";
 
-console.log(app);
+GetProducts();
 
 function App() {
   return (
