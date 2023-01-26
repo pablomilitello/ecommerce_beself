@@ -3,9 +3,26 @@ import Button from "../Button/Button";
 import { cartContext } from "../../storage/cartContext";
 import "./cartContainer.scss";
 import { Link } from "react-router-dom";
+import { createOrder } from "../../services/firebase";
 
 function CartContainer() {
   const { cart, removeItem, clearCart, getTotalPriceInCart } = useContext(cartContext);
+
+  function handleCheckout() {
+    const items = cart.map((item) => ({ id: item.id, price: item.price, count: item.count, title: item.title }));
+    const order = {
+      buyer: {
+        name: "Pablo",
+        email: "lllll@lat.com",
+        phone: "123456",
+      },
+      items: items,
+      total: getTotalPriceInCart(),
+      date: new Date(),
+    };
+    console.table(order);
+    createOrder(order);
+  }
 
   if (cart.length === 0) {
     return (
@@ -38,9 +55,9 @@ function CartContainer() {
           </div>
         </div>
         <div className="divCartTotal">
-          <h4>Total {getTotalPriceInCart()}</h4>
+          <h4>El total de tu compra es de $ {getTotalPriceInCart()}</h4>
           <div className="cartButtons">
-            <Button padding="5px 10px" text="Finalizar compra" color="blue" />
+            <Button onClick={handleCheckout} padding="5px 10px" text="Finalizar compra" color="blue" />
             <Button onClick={clearCart} padding="2px 4px" color="red" text="Vaciar carrito"></Button>
             <Link to="/">
               <Button padding="2px 4px" color="green" text="Segui comprando"></Button>
