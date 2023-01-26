@@ -2,12 +2,13 @@ import React, { useContext } from "react";
 import Button from "../Button/Button";
 import { cartContext } from "../../storage/cartContext";
 import "./cartContainer.scss";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { createOrder } from "../../services/firebase";
+import Swal from "sweetalert2";
 
 function CartContainer() {
   const { cart, removeItem, clearCart, getTotalPriceInCart } = useContext(cartContext);
-
+  const navigate = useNavigate();
   function handleCheckout() {
     const items = cart.map((item) => ({ id: item.id, price: item.price, count: item.count, title: item.title }));
     const order = {
@@ -20,8 +21,19 @@ function CartContainer() {
       total: getTotalPriceInCart(),
       date: new Date(),
     };
-    console.table(order);
-    createOrder(order);
+    createOrder(order).then((id, count) => {
+      Swal.fire({
+        title: "Felicitaciones por tu compra!!!",
+        text: `Tu ID es ${id}`,
+        imageUrl: "../images/beSelfMarca.svg",
+        imageWidth: 400,
+        imageHeight: 200,
+        imageAlt: "Logo BeSelf",
+      }).then(() => {
+        clearCart();
+        navigate("/");
+      });
+    });
   }
 
   if (cart.length === 0) {
@@ -42,11 +54,11 @@ function CartContainer() {
           <div>
             {cart.map((itemInCart) => (
               <div key={itemInCart.id} className="divCartSubItems">
-                {/* <div>
-                  <img src={itemInCart.url} />
-                </div> */}
-                <h5>{`. ${itemInCart.count}  Un.`}</h5>
-                <h5>{`  ${itemInCart.title}`}</h5>
+                <span>
+                  <img src={itemInCart.url} height="50" alt="imgPreviewCart" />
+                </span>
+                <h5>{`${itemInCart.count}  Un.`}</h5>
+                <h5>{`${itemInCart.title}`}</h5>
                 <h5>{`$${itemInCart.price}`}</h5>
                 <h5>Subtotal {itemInCart.price * itemInCart.count}</h5>
                 <Button padding="2px 6px" text="X" color="red" onClick={() => removeItem(itemInCart)} />
@@ -58,9 +70,9 @@ function CartContainer() {
           <h4>El total de tu compra es de $ {getTotalPriceInCart()}</h4>
           <div className="cartButtons">
             <Button onClick={handleCheckout} padding="5px 10px" text="Finalizar compra" color="blue" />
-            <Button onClick={clearCart} padding="2px 4px" color="red" text="Vaciar carrito"></Button>
+            <Button onClick={clearCart} padding="5px 10px" color="red" text="Vaciar carrito"></Button>
             <Link to="/">
-              <Button padding="2px 4px" color="green" text="Segui comprando"></Button>
+              <Button padding="5px 10px" color="green" text="Seguir comprando"></Button>
             </Link>
           </div>
         </div>

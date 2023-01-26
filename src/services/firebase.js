@@ -45,9 +45,8 @@ export async function GetProductByCategory(categoryURL) {
 
 export async function createOrder(order) {
   const orderRef = collection(db, "order");
-  addDoc(orderRef, order).then((anser) => {
-    return anser;
-  });
+  let anser = await addDoc(orderRef, order);
+  return anser.id;
 }
 
 export default db;
