@@ -9,18 +9,17 @@ import Swal from "sweetalert2";
 function CartContainer() {
   const { cart, removeItem, clearCart, getTotalPriceInCart } = useContext(cartContext);
   const navigate = useNavigate();
-  function handleCheckout() {
+
+  function handleCheckout(userData) {
     const items = cart.map((item) => ({ id: item.id, price: item.price, count: item.count, title: item.title }));
+
     const order = {
-      buyer: {
-        name: "Pablo",
-        email: "lllll@lat.com",
-        phone: "123456",
-      },
+      buyer: userData,
       items: items,
       total: getTotalPriceInCart(),
       date: new Date(),
     };
+
     createOrder(order).then((id, count) => {
       Swal.fire({
         title: "Felicitaciones por tu compra!!!",
@@ -31,7 +30,7 @@ function CartContainer() {
         imageAlt: "Logo BeSelf",
       }).then(() => {
         clearCart();
-        navigate("/");
+        navigate("/checkout");
       });
     });
   }
@@ -69,7 +68,9 @@ function CartContainer() {
         <div className="divCartTotal">
           <h4>El total de tu compra es de $ {getTotalPriceInCart()}</h4>
           <div className="cartButtons">
-            <Button onClick={handleCheckout} padding="5px 10px" text="Finalizar compra" color="blue" />
+            <Link to={`/checkout`}>
+              <Button padding="5px 10px" text="Finalizar compra" color="blue" />
+            </Link>
             <Button onClick={clearCart} padding="5px 10px" color="red" text="Vaciar carrito"></Button>
             <Link to="/">
               <Button padding="5px 10px" color="green" text="Seguir comprando"></Button>

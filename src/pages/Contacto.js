@@ -19,7 +19,7 @@ function Contacto() {
             name="comentario"
             className="textarea__text field"
             placeholder="Dejanos tu consulta aquí:"></textarea>
-          <Button text="Enviar Datos" />
+          <Button color="#F0C808" text="Enviar Datos" padding="10px 20px" />
         </div>
       </form>
     </>

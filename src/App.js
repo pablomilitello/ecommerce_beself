@@ -14,6 +14,7 @@ import Contacto from "./pages/Contacto";
 import Nosotros from "./pages/Nosotros";
 import CartContainer from "./components/CartContainer/CartContainer";
 import { GetProducts } from "./services/firebase";
+import FormCheckout from "./components/FormCheckout/FormCheckout";
 
 function App() {
   GetProducts();
@@ -36,6 +37,7 @@ function App() {
             <Route path="/we" element={<Nosotros />}></Route>
             <Route path="/contact" element={<Contacto />}></Route>
             <Route path="/cart" element={<CartContainer />}></Route>
+            <Route path="/checkout" element={<FormCheckout />}></Route>
             <Route path="*" element={<PageNotFound />}></Route>
           </Routes>
           <Footer />
