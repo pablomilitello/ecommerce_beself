@@ -15,9 +15,8 @@ import Nosotros from "./pages/Nosotros";
 import CartContainer from "./components/CartContainer/CartContainer";
 import { GetProducts } from "./services/firebase";
 
-GetProducts();
-
 function App() {
+  GetProducts();
   return (
     <>
       <CartProvider>
