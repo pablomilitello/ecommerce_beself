@@ -25,7 +25,7 @@ export default function FormCheckout() {
   let fieldsForm = Object.keys(userData);
 
   const navigate = useNavigate();
-  const { clearCart, getTotalPriceInCart, cart } = cartContext;
+  const { clearCart, getTotalPriceInCart, cart } = useContext(cartContext);
 
   function onInputChange(evt) {
     let value = evt.target.value;
@@ -53,7 +53,13 @@ export default function FormCheckout() {
   }
 
   function handleCheckout() {
-    const items = cart.map((item) => ({ id: item.id, price: item.price, count: item.count, title: item.title }));
+    const items = cart.map((item) => ({
+      id: item.id,
+      price: item.price,
+      count: item.count,
+      title: item.title,
+      key: item.id,
+    }));
 
     let order = {
       buyer: userData,
@@ -81,12 +87,18 @@ export default function FormCheckout() {
     <form className="form" onSubmit={onSubmit}>
       <h4 className="formText">Ya casi es tuyo...</h4>
       <h4 className="formText">Llena tus datos para finalizar la compra.</h4>
-      {fieldsForm.map((field) => (
-        <InputForm value={userData[field]} name={field} onChange={onInputChange} label={field} userData={userData} />
+      {fieldsForm.map((field, index) => (
+        <InputForm
+          key={index}
+          value={userData[field]}
+          name={field}
+          onChange={onInputChange}
+          label={field}
+          userData={userData}
+        />
       ))}
       <div className="divButtons">
-        <Button color="red" text="Crear orden" type="submit" onClick={FormCheckout} />
-
+        <Button color="red" text="Crear orden" type="submit" />
         <button className="formButton" onClick={() => setUserData({ Nombre: "", Teléfono: "", Email: "" })}>
           Limpiar formulario
         </button>
