@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Button from "../Button/Button";
 import "./formCheckout.scss";
 
 function InputForm(props) {
@@ -10,7 +11,7 @@ function InputForm(props) {
   );
 }
 
-export default function FormCheckout(props) {
+export default function FormCheckout() {
   const [userData, setUserData] = useState({
     Nombre: "",
     Telefono: "",
@@ -44,9 +45,7 @@ export default function FormCheckout(props) {
         <InputForm value={userData[field]} name={field} onChange={onInputChange} label={field} userData={userData} />
       ))}
       <div className="divButtons">
-        <button className="formButton" disabled={formIsInvalid()} type="submit">
-          Crear orden
-        </button>
+        <Button color="red" text="Crear orden" onClick={FormCheckout} type="submit" />
 
         <button className="formButton" onClick={() => setUserData({ Nombre: "", Teléfono: "", Email: "" })}>
           Limpiar formulario

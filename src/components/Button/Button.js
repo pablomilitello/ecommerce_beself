@@ -4,6 +4,8 @@ function Button(props) {
   let styleButton = {
     backgroundColor: props.color,
     padding: props.padding,
+    type: props.type,
+    disabled: props.disabled,
   };
 
   return (
