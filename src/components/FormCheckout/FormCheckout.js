@@ -1,6 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import Button from "../Button/Button";
 import "./formCheckout.scss";
+import { createOrder } from "../../services/firebase";
+import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
+import { cartContext } from "../../storage/cartContext";
 
 function InputForm(props) {
   return (
@@ -20,6 +24,9 @@ export default function FormCheckout() {
 
   let fieldsForm = Object.keys(userData);
 
+  const navigate = useNavigate();
+  const { clearCart, getTotalPriceInCart, cart } = cartContext;
+
   function onInputChange(evt) {
     let value = evt.target.value;
     let inputName = evt.target.name;
@@ -31,10 +38,43 @@ export default function FormCheckout() {
 
   function onSubmit(evt) {
     evt.preventDefault();
+    if (userData.Nombre !== "" && userData.Telefono !== "" && userData.Email !== "") {
+      handleCheckout();
+    } else {
+      Swal.fire({
+        title: "Error",
+        text: `Todos los campos son requeridos para finalizar la compra`,
+        imageUrl: "../images/beSelfMarca.svg",
+        imageWidth: 400,
+        imageHeight: 200,
+        imageAlt: "Logo BeSelf",
+      });
+    }
   }
 
-  function formIsInvalid() {
-    return !(userData.Nombre !== "" && userData.Telefono !== "" && userData.Email !== "");
+  function handleCheckout() {
+    const items = cart.map((item) => ({ id: item.id, price: item.price, count: item.count, title: item.title }));
+
+    let order = {
+      buyer: userData,
+      items: items,
+      total: getTotalPriceInCart(),
+      date: new Date(),
+    };
+
+    createOrder(order).then((id, count) => {
+      Swal.fire({
+        title: "Felicitaciones por tu compra!!!",
+        text: `Tu ID es ${id}`,
+        imageUrl: "../images/beSelfMarca.svg",
+        imageWidth: 400,
+        imageHeight: 200,
+        imageAlt: "Logo BeSelf",
+      }).then(() => {
+        clearCart();
+        navigate("/");
+      });
+    });
   }
 
   return (
@@ -45,7 +85,7 @@ export default function FormCheckout() {
         <InputForm value={userData[field]} name={field} onChange={onInputChange} label={field} userData={userData} />
       ))}
       <div className="divButtons">
-        <Button color="red" text="Crear orden" onClick={FormCheckout} type="submit" />
+        <Button color="red" text="Crear orden" type="submit" onClick={FormCheckout} />
 
         <button className="formButton" onClick={() => setUserData({ Nombre: "", Teléfono: "", Email: "" })}>
           Limpiar formulario

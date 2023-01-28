@@ -2,38 +2,10 @@ import React, { useContext } from "react";
 import Button from "../Button/Button";
 import { cartContext } from "../../storage/cartContext";
 import "./cartContainer.scss";
-import { Link, useNavigate } from "react-router-dom";
-import { createOrder } from "../../services/firebase";
-import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 function CartContainer() {
   const { cart, removeItem, clearCart, getTotalPriceInCart } = useContext(cartContext);
-  const navigate = useNavigate();
-
-  function handleCheckout(userData) {
-    const items = cart.map((item) => ({ id: item.id, price: item.price, count: item.count, title: item.title }));
-
-    const order = {
-      buyer: userData,
-      items: items,
-      total: getTotalPriceInCart(),
-      date: new Date(),
-    };
-
-    createOrder(order).then((id, count) => {
-      Swal.fire({
-        title: "Felicitaciones por tu compra!!!",
-        text: `Tu ID es ${id}`,
-        imageUrl: "../images/beSelfMarca.svg",
-        imageWidth: 400,
-        imageHeight: 200,
-        imageAlt: "Logo BeSelf",
-      }).then(() => {
-        clearCart();
-        navigate("/checkout");
-      });
-    });
-  }
 
   if (cart.length === 0) {
     return (
@@ -71,7 +43,7 @@ function CartContainer() {
             <Link to={`/checkout`}>
               <Button padding="5px 10px" text="Finalizar compra" color="blue" />
             </Link>
-            <Button onClick={clearCart} padding="5px 10px" color="red" text="Vaciar carrito"></Button>
+            <Button padding="5px 10px" color="red" text="Vaciar carrito"></Button>
             <Link to="/">
               <Button padding="5px 10px" color="green" text="Seguir comprando"></Button>
             </Link>
