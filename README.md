@@ -29,7 +29,7 @@ https://www.loom.com/share/31562b22e9434db3b2b3fee9060738c9
 
 ## Deployment
 
-Podrás acceder al deploy desde aquí: [ecommerce-beself-fwfugo2so-pablomilitello.vercel.app](ecommerce-beself-fwfugo2so-pablomilitello.vercel.app)
+Podrás acceder al deploy desde aquí: [https://ecommerce-beself.vercel.app/](https://ecommerce-beself.vercel.app/)
 
 ## Aprender más
 
