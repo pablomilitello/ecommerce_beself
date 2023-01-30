@@ -98,7 +98,7 @@ export default function FormCheckout() {
         />
       ))}
       <div className="divButtons">
-        <Button color="red" text="Crear orden" type="submit" />
+        <Button color="green" text="Crear orden" type="submit" padding="5px 10px" />
         <button className="formButton" onClick={() => setUserData({ Nombre: "", Teléfono: "", Email: "" })}>
           Limpiar formulario
         </button>

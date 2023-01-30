@@ -32,7 +32,7 @@ function CartContainer() {
                 <h5>{`${itemInCart.title}`}</h5>
                 <h5>{`$${itemInCart.price}`}</h5>
                 <h5>Subtotal {itemInCart.price * itemInCart.count}</h5>
-                <Button padding="2px 6px" text="X" color="red" onClick={() => removeItem(itemInCart)} />
+                <Button padding="2px 6px" text="X" color="coral" onClick={() => removeItem(itemInCart)} />
               </div>
             ))}
           </div>
@@ -41,11 +41,11 @@ function CartContainer() {
           <h4>El total de tu compra es de $ {getTotalPriceInCart()}</h4>
           <div className="cartButtons">
             <Link to={`/checkout`}>
-              <Button padding="5px 10px" text="Finalizar compra" color="blue" />
+              <Button padding="5px 10px" text="Finalizar compra" color="green" />
             </Link>
-            <Button padding="5px 10px" color="red" text="Vaciar carrito"></Button>
+            <Button onClick={clearCart} padding="5px 10px" color="coral" text="Vaciar carrito"></Button>
             <Link to="/">
-              <Button padding="5px 10px" color="green" text="Seguir comprando"></Button>
+              <Button padding="5px 10px" color="#F0C808" text="Seguir comprando"></Button>
             </Link>
           </div>
         </div>

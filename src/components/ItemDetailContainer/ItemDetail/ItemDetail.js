@@ -20,7 +20,7 @@ function ItemDetail(props) {
           <ItemCount stock={stock} onAddToCart={onAddToCart} onClearCart={onClearCart} />
         ) : (
           <Link to="/">
-            <Button text="Segui comprando" padding="10px 10px" color="green" />
+            <Button text="Segui comprando" padding="10px 10px" color="#F0C808" />
           </Link>
         )}
       </div>
