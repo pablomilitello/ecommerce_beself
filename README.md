@@ -22,17 +22,17 @@ La aplicación comenzará a correr en el modo desarrollador.
 
 Para ver el proyecto debes abrir en el navegador lo siguiente: [http://localhost:3000](http://localhost:3000).
 
+## Funcionamiento
+
+Ver el video en el siguiente link:
+https://www.loom.com/share/31562b22e9434db3b2b3fee9060738c9
+
+## Deployment
+
+Podrás acceder al deploy desde aquí: [ecommerce-beself-fwfugo2so-pablomilitello.vercel.app](ecommerce-beself-fwfugo2so-pablomilitello.vercel.app)
+
 ## Aprender más
 
 Puedes aprender más sobre [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 Para aprender sobre React, dale un vistazo a la [React documentation](https://reactjs.org/).
-
-### Deployment
-
-Podrás acceder al deploy desde aquí: [ecommerce-beself-fwfugo2so-pablomilitello.vercel.app](ecommerce-beself-fwfugo2so-pablomilitello.vercel.app)
-
-## Funcionamiento
-
-Ver el video en el siguiente link:
-https://www.loom.com/share/31562b22e9434db3b2b3fee9060738c9
