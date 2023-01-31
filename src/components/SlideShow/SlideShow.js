@@ -2,13 +2,9 @@ import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import "./slideshow.scss";
 
-const siguiente = () => {
-  //console.log("Siguiente");
-};
+const siguiente = () => {};
 
-const anterior = () => {
-  //console.log("Anterior");
-};
+const anterior = () => {};
 
 function SlideShow() {
   const slideshow = useRef(null);

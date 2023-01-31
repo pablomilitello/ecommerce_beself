@@ -12,9 +12,7 @@ function NavBar() {
     { title: "Contacto", url: "/contact" },
   ];
 
-  function LoginSession() {
-    console.log("--> Te has logueado con éxito");
-  }
+  function LoginSession() {}
 
   return (
     <header className="header">

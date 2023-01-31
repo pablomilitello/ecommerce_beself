@@ -17,7 +17,6 @@
 .cartList {
     border-spacing: 0;
     border-radius: 5px;
-    border: solid 1px rgb(233, 244, 75);
     width: 95%;
     margin: 15px auto;
     text-align: center;
@@ -42,7 +41,6 @@
 }
 
 .cartClean {
-    //background-color: lightgray;
     width: 800px;
     height: 300px;
     margin: 20px auto;
@@ -54,4 +52,13 @@
 
 .cartTextClean {
     margin-bottom: 10px;
+}
+
+td {
+    padding-top: 10px;
+}
+
+td img {
+    width: 30%;
+    background-attachment: fixed;
 }
